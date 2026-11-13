@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ariana Home Furniture’s online showroom is coming soon.">
+  <meta name="theme-color" content="#f5f0e8">
+  <title>Ariana Home Furniture — Coming Soon</title>
+  <link rel="icon" href="ariana-home.ico">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f0e8;
+      --ink: #28221f;
+      --muted: #625750;
+      --accent: #8d3027;
+      --rule: #d8cec2;
+      --edge: clamp(1.5rem, 5vw, 5rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.6 "Segoe UI", Arial, sans-serif;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: minmax(0, 43fr) minmax(0, 57fr);
+      min-height: 100svh;
+      padding: 1.15rem;
+      max-width: 120rem;
+      margin: auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: clamp(1.3rem, 3vw, 3rem) var(--edge) 1.75rem;
+    }
+
+    .brand {
+      position: relative;
+      width: 10.25rem;
+      height: 5.4rem;
+      overflow: hidden;
+      mix-blend-mode: multiply;
+    }
+
+    .brand img { display: block; width: 100%; height: auto; transform: translateY(-24%); }
+
+    .message { margin: auto 0; padding: 3rem 0 3.8rem; }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 0 0 1.35rem;
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 650;
+      letter-spacing: .21em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before { content: ""; width: 1.55rem; height: 1px; background: currentColor; }
+
+    h1 {
+      margin: 0;
+      font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
+      font-size: clamp(4.2rem, 7.7vw, 9rem);
+      font-weight: 400;
+      line-height: .87;
+      letter-spacing: -.075em;
+    }
+
+    h1 em { color: var(--accent); font-weight: 400; }
+
+    .description {
+      max-width: 23rem;
+      margin: 2rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.3vw, 1.16rem);
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1rem;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .room {
+      min-width: 0;
+      min-height: 33rem;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      background: #c8b39e;
+    }
+
+    .room img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+    }
+
+    @media (max-width: 760px) {
+      .page { display: block; padding: .75rem; }
+      .content { padding: 1.1rem 1rem 1.4rem; }
+      .brand { width: 8.75rem; height: 4.65rem; }
+      .message { padding: 2.4rem 0 2rem; }
+      h1 { font-size: clamp(3.6rem, 13vw, 6.5rem); }
+      .description { margin-top: 1.3rem; }
+      .room { min-height: 0; aspect-ratio: 4 / 3; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="content" aria-labelledby="launch-title">
+      <header class="brand">
+        <img src="logo.png" alt="Ariana Home Furniture" width="256" height="256">
+      </header>
+      <div class="message">
+        <p class="eyebrow">The online showroom</p>
+        <h1 id="launch-title">Coming<br><em>soon.</em></h1>
+        <p class="description">Ariana Home Furniture is opening its online showroom. Check back to explore furniture for the rooms you call home.</p>
+      </div>
+      <footer>&copy; Ariana Home Furniture</footer>
+    </section>
+    <figure class="room">
+      <img src="living-room.jpg" alt="A cream sofa and walnut coffee table in a sunlit living room" fetchpriority="high">
+    </figure>
+  </main>
+</body>
+</html>
+
+
