@@ -89,3 +89,48 @@ form button { margin-top: 1rem; }
   .hero-content > p:not(.label) { font-size: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* The navigation floats above the hero and stays within reach as visitors scroll. */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  height: 0;
+  background: transparent;
+}
+.header-inner {
+  position: relative;
+  top: .85rem;
+  width: min(100% - 2rem, 87rem);
+  min-height: 4.85rem;
+  padding: .3rem clamp(.85rem, 2.6vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, .83);
+  border-radius: 1.15rem;
+  background: rgba(250, 245, 237, .94);
+  box-shadow: 0 10px 30px rgba(31, 21, 15, .18), inset 0 1px 0 #fff;
+}
+@supports (backdrop-filter: blur(1px)) {
+  .header-inner {
+    background: linear-gradient(120deg, rgba(255, 251, 245, .9), rgba(245, 235, 222, .78));
+    backdrop-filter: blur(20px) saturate(145%);
+  }
+}
+.logo { width: 7.9rem; height: 4.1rem; }
+nav { gap: clamp(.25rem, 1.55vw, 1.45rem); }
+nav a { padding: .55rem .75rem; border-radius: .55rem; }
+nav a:hover, nav a[aria-current] { background: #84372d14; text-decoration: none; }
+.button, .menu-toggle { border-radius: .55rem; }
+.hero-content { padding-top: 9rem; }
+.hero::after { background: linear-gradient(90deg, #17100dd9, #17100d9c 40%, #17100d19 100%); }
+.categories img { border-radius: .9rem; }
+.details article { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+form input, form select, form textarea { border-radius: .45rem; }
+main [id] { scroll-margin-top: 6.5rem; }
+@media (max-width: 800px) {
+  .header-inner { top: .55rem; min-height: 4.25rem; }
+  .logo { width: 7rem; height: 3.65rem; }
+  .menu-toggle { background: #fff9; }
+  .hero-content { padding-top: 7.25rem; }
+  nav { border-top: 1px solid var(--line); padding-top: .45rem; }
+  nav a { padding: .55rem .75rem; }
+}
