@@ -25,7 +25,6 @@ quoteForm?.addEventListener('submit', event => {
   const body = [
     'Name: ' + fields.get('name'),
     'Email: ' + fields.get('email'),
-    'Order type: ' + fields.get('type'),
     'Delivery location: ' + fields.get('location'),
     '',
     'Furniture and quantities:',
@@ -77,4 +76,5 @@ const collectionName = {
 if (collectionName && quoteForm) {
   quoteForm.elements.details.placeholder = 'Tell us which ' + collectionName.toLowerCase() + ' pieces or styles you need, quantities, and your target delivery date.';
 }
+
 
