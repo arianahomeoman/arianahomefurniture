@@ -155,3 +155,42 @@ main [id] { scroll-margin-top: 6.5rem; }
   }
   .header-inner nav a:last-child { border-right: 1px solid #49352824; }
 }
+
+.collections-toggle {
+  display: flex; align-items: center; gap: .38em; background: transparent;
+  color: inherit; border: 0; padding: .55rem .75rem; font: inherit; cursor: pointer;
+}
+.collection-menu { position: relative; display: flex; }
+.collection-links[hidden] { display: none; }
+.collection-links {
+  position: absolute; top: 100%; left: 0; min-width: 12rem; padding: .35rem;
+  background: #fffaf1; border: 1px solid var(--line); border-radius: .7rem;
+  box-shadow: 0 12px 25px #261a152b;
+}
+.collection-links a { display: block; padding: .6rem .75rem; }
+.collections-toggle:hover, .collections-toggle[aria-expanded="true"] { background: #84372d14; color: var(--accent); }
+.categories { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.category { display: block; }
+.category:hover h3 { color: var(--accent); }
+.category h3 span { font: .8rem "Segoe UI", sans-serif; color: var(--accent); white-space: nowrap; }
+.collection-page { padding-block: 7.5rem 4rem; }
+.collection-intro { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; margin-top: 1.5rem; }
+.collection-intro h1 { font-size: clamp(3.2rem, 6vw, 6.75rem); }
+.collection-intro p { margin-top: 1rem; max-width: 33rem; }
+.collection-summary { color: var(--accent); font-weight: 650; }
+.collection-intro .button { margin-top: 1.5rem; }
+.collection-intro figure { margin: 0; }
+.collection-intro img { width: 100%; aspect-ratio: 1.35; object-fit: cover; border-radius: .9rem; }
+.collection-intro figcaption { color: var(--muted); font-size: .8rem; margin-top: .4rem; }
+@media (min-width: 801px) {
+  .collections-toggle { border-left: 1px solid #49352824; box-shadow: inset 1px 0 #fff6; padding-inline: clamp(.65rem, 1.15vw, 1.1rem); }
+  .header-inner nav .collection-links a { border: 0; box-shadow: none; border-radius: .4rem; }
+}
+@media (max-width: 800px) {
+  .collection-menu { display: block; }
+  .collections-toggle { width: 100%; justify-content: space-between; }
+  .collection-links { position: static; min-width: 0; box-shadow: none; margin-inline: .75rem; }
+  .categories { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .collection-intro { grid-template-columns: 1fr; }
+}
+@media (max-width: 530px) { .categories { grid-template-columns: 1fr; } }

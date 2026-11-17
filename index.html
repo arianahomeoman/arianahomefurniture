@@ -18,7 +18,14 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
     <nav id="navigation" aria-label="Main navigation">
       <a href="#home" aria-current="page">Home</a>
-      <a href="#collections">Collections</a>
+      <div class="collection-menu"><button class="collections-toggle" type="button" aria-controls="collection-links" aria-expanded="false">Collections <span aria-hidden="true">▾</span></button>
+        <div class="collection-links" id="collection-links" hidden>
+          <a href="living-room.html">Living Room</a>
+          <a href="dining-room.html">Dining Room</a>
+          <a href="bedroom.html">Bedroom</a>
+          <a href="rugs.html">Rugs</a>
+        </div>
+      </div>
       <a href="#bulk">Bulk Orders</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -43,9 +50,10 @@
       <p>Explore the styles you’d like to bring into your space. Collection images are illustrative.</p>
     </div>
     <div class="categories">
-      <article><img src="living.jpg" alt="Caramel sofa in a contemporary living room" loading="lazy"><h3>Living Room</h3><p>Sofas, accent chairs & coffee tables</p></article>
-      <article><img src="dining.jpg" alt="Oak dining table with upholstered chairs" loading="lazy"><h3>Dining Room</h3><p>Dining tables, chairs & sideboards</p></article>
-      <article><img src="bedroom.jpg" alt="Upholstered bed with a walnut nightstand" loading="lazy"><h3>Bedroom</h3><p>Beds, nightstands & storage</p></article>
+      <a class="category" href="living-room.html"><img src="living.jpg" alt="Caramel sofa in a contemporary living room" loading="lazy"><h3>Living Room <span aria-hidden="true">↗</span></h3><p>Sofas, accent chairs & coffee tables</p></a>
+      <a class="category" href="dining-room.html"><img src="dining.jpg" alt="Oak dining table with upholstered chairs" loading="lazy"><h3>Dining Room <span aria-hidden="true">↗</span></h3><p>Dining tables, chairs & sideboards</p></a>
+      <a class="category" href="bedroom.html"><img src="bedroom.jpg" alt="Upholstered bed with a walnut nightstand" loading="lazy"><h3>Bedroom <span aria-hidden="true">↗</span></h3><p>Beds, nightstands & storage</p></a>
+      <a class="category" href="rugs.html"><img src="rugs.jpg" alt="Textured ivory and taupe rug on an oak floor" loading="lazy"><h3>Rugs <span aria-hidden="true">↗</span></h3><p>Area rugs & runners</p></a>
     </div>
   </section>
   <section class="bulk" id="bulk" aria-labelledby="bulk-title">
