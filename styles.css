@@ -136,3 +136,22 @@ main [id] { scroll-margin-top: 6.5rem; }
 }
 
 
+
+/* Keep the reflection continuous behind the full-height navigation cells. */
+.header-inner {
+  background: linear-gradient(180deg, #fff5 0%, #fff2 48%, #fff7 100%), linear-gradient(105deg, #f8f2e7e8, #c9b498b3);
+  box-shadow: 0 10px 30px #1f150f2e, inset 0 1px 0 #fff, inset 0 -1px 0 #fff8;
+}
+@media (min-width: 801px) {
+  .header-inner { padding-block: 0; }
+  .header-inner nav { align-self: stretch; align-items: stretch; gap: 0; }
+  .header-inner nav a {
+    display: flex;
+    align-items: center;
+    padding-inline: clamp(.65rem, 1.15vw, 1.1rem);
+    border-left: 1px solid #49352824;
+    box-shadow: inset 1px 0 #fff6;
+    border-radius: 0;
+  }
+  .header-inner nav a:last-child { border-right: 1px solid #49352824; }
+}
